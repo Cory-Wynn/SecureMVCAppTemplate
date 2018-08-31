@@ -88,3 +88,6 @@ C:\Users\cory.wynn\Desktop\Git Repos\AspNetIdentity\AspNetIdentity\bin\SendGridM
 C:\Users\cory.wynn\Desktop\Git Repos\AspNetIdentity\AspNetIdentity\bin\Microsoft.Threading.Tasks.xml
 C:\Users\cory.wynn\Desktop\Git Repos\AspNetIdentity\AspNetIdentity\bin\Microsoft.Threading.Tasks.Extensions.xml
 C:\Users\cory.wynn\Desktop\Git Repos\AspNetIdentity\AspNetIdentity\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\cory.wynn\Desktop\Git Repos\AspNetIdentity\AspNetIdentity\obj\Debug\AspNetIdentity.Migrations.InitialCreate.resources
+C:\Users\cory.wynn\Desktop\Git Repos\AspNetIdentity\AspNetIdentity\obj\Debug\AspNetIdentity.csproj.GenerateResource.Cache
+C:\Users\cory.wynn\Desktop\Git Repos\AspNetIdentity\AspNetIdentity\obj\Debug\AspNetIdentity.Migrations.BirthDate.resources

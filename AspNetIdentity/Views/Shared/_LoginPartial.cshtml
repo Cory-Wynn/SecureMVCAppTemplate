@@ -1,10 +1,12 @@
-﻿@using Microsoft.AspNet.Identity
+﻿@using AspNetIdentity.Models
+@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.EntityFramework
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
     @Html.AntiForgeryToken()
-
+        var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
     <ul class="nav navbar-nav navbar-right">
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })

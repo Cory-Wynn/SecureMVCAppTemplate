@@ -1,9 +1,19 @@
-﻿@model AspNetIdentity.Models.IndexViewModel
+﻿@using AspNetIdentity.Models
+@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.EntityFramework
+@model AspNetIdentity.Models.IndexViewModel
 @{
     ViewBag.Title = "Manage";
 }
 
 <h2>@ViewBag.Title.</h2>
+
+@{
+    var currentUserId = User.Identity.GetUserId();
+    var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+    var currentUser = manager.FindById(User.Identity.GetUserId());
+    
+}
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
@@ -27,6 +37,10 @@
         <dd>
             @Model.Logins.Count [
             @Html.ActionLink("Manage", "ManageLogins") ]
+        </dd>
+        <dt>Birth Date</dt>
+        <dd>
+            @currentUser.BirthDate
         </dd>
         @*
             Phone Numbers can used as a second factor of verification in a two-factor authentication system.
